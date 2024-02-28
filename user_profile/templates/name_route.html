@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    {% load static %} <!-- reference static files-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"><!--css reference-->
+    <script src="{% static 'js/script.js'}"></script><!--js folder-->
+</head>
+<body>
+    <h1>Welcome {{route_name}}!</h1>
+    <p>Favorite Color: {{favorite_color}}</p>
+    <p>Age: {{age}}</p>
+    <h3>Hobbies</h3>
+        <ul>
+        {% for hobby in hobbies %}
+            <li>{{hobby}}</li>
+        {% endfor %}
+        </ul>
+    <!-- <img src="{% static 'images/img_name'}"/>--> <!--img reference from static folder -->
+</body>
+</html>
